@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contact Page</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="Projects.html">Projects</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+    </nav>
+
+    <section id="skills">   
+        <div class="skills container">
+            <h1 style="text-decoration: underline;" class="section-tittle" >CONTACT <span>INFO</span></h1> 
+            <div class="contact-items">
+                <div class="contact-item">
+                    <div class="icon"><img src="./img/icons8-person-30.png"/></div>
+                    <div class="Contact-info" style="color: aliceblue;">
+                        <h1>Person</h1>
+                        <h2>i210707@gmail.com</h2>
+                        <h2>hamzagondal921@gmail.com</h2>
+                    </div>
+                </div>
+                <div class="contact-item" style="color: aliceblue;">
+                    <div class="icon"><img src="./img/icons8-phone-50.png"/></div>
+
+                        <h1>Phone</h1>
+                        <h2>+123 456 789</h2>
+                        <h2>+123 456 789</h2>
+                   
+                </div>
+                <div class="contact-item" style="color: aliceblue;">
+                    <div class="icon"><img src="./img/icons8-email-50.png"/></div>
+                    
+                        <h1>Email</h1>
+                        <h2>i210707@gmail.com</h2>
+                        <h2>hamzagondal921@gmail.com</h2>
+                    
+                </div>
+                <div class="contact-item" style="color: aliceblue;">
+                    <div class="icon"><img src="./img/icons8-linked-in-50.png"/></div>
+                        <h1 >LinkedIn</h1>
+                        <h2>Hamza Tariq</h2>
+                        <h2>hamzatariq0707</h2>
+                </div>
+            </div>
+        </div>
+
+        <h1 style="text-decoration: underline;" class="section-tittle" >CONTACT <span>Form</span></h1> 
+        <div class="skills-set" style="text-align: center;">
+            <div class="skill" style="text-align: center;">
+                <form action="#" method="POST" class="contact-form">
+                    <label for="email"><h2>Email:</h2></label>
+                    <input type="email" id="email" name="email" required><br><br>
+                    <label for="question">Question:</label>
+                    <textarea id="question" name="question" required></textarea><br><br>
+                    <label for="meeting-date">Meeting Date:</label>
+                    <input type="date" id="meeting-date" name="meeting-date" required><br><br>
+                    <label for="meeting-time">Meeting Time:</label>
+                    <input type="time" id="meeting-time" name="meeting-time" required><br><br>
+                    <input type="button" value="Submit" onclick="window.location.href = 'index.html';">
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

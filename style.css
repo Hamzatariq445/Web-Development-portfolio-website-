@@ -1,0 +1,453 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 8px;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* table */
+
+table {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: transparent;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 12px;
+    text-align: left;
+    font-size: 16px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+th,
+td {
+    font-weight: bold;
+}
+
+/* NAVBAR */
+
+nav {
+    font-size: xx-large;
+    margin-bottom: 160px;
+    background-color: #333;
+    color: white;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding-bottom: 5px;
+    transition: border-bottom 0.3s;
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid rgb(193, 29, 29);
+    color: #df5252;
+}
+
+/* Main Section */
+#main {
+    background-image: url(./img/dark.jpg);
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+}
+
+#main .main {
+    max-width: 1200px;
+    top: 30%;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+
+/* overlay */
+#main::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+#main h1 {
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: rgb(188, 230, 242);
+    animation: text_display 0.5s ease forwards;
+}
+
+#main .cta {
+    display: inline-block;
+    padding: 10px 30px;
+    color: aliceblue;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-top: 30px;
+    transition: 0.3s ease background-color;
+    transition-property: background-color, color;
+}
+
+#main .cta:hover {
+    color: aliceblue;
+    background-color: brown;
+}
+
+#main h1 span {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 0%;
+    background-color: brown;
+    animation: identifier 1s ease;
+    animation-delay: 1s;
+}
+
+#main .inline-hover {
+    color: inherit;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    
+}
+
+#main .inline-hover:hover {
+    color: #f1f1f1;
+    background-color: #df5252;
+    text-decoration: none;
+}
+
+.section-tittle {
+    font-size: 4rem;
+    font-weight: 300;
+    color: #f1f1f1;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2rem;
+    text-align: center;
+}
+
+.section-tittle span {
+    color: #df5252;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+}
+
+.contact-form label {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #333;
+    color: white;
+    font-size: 1.6rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #555;
+}
+/* For Animation */
+@keyframes identifier {
+    50% {
+        width: 100%;
+        left: 0%;
+    }
+    100% {
+        width: 0%;
+        left: 100%;
+    }
+}
+
+/* Skills  */
+#skills {
+    background-image: url(./img/smoke.jfif);
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+}
+
+#skills .skills {
+    margin-top: -150px;
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 50 auto;
+    padding: 100px 0;
+}
+
+#skills .skills-introduction p {
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300px;
+    letter-spacing: 0.05rem;
+    color: salmon;
+}
+
+#skills .skills-set {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+#skills .skill {
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    background-image: url(./img/greybackground.jfif);
+    background-size: cover;
+    margin: 10px 5%;
+    position: relative;
+    z-index: 1;
+}
+
+#skills .skill .icon {
+    height: 60px;
+    width: 60px;
+    margin-bottom: 40px;
+}
+
+#skills .skill p {
+    text-align: left;
+    font-size: 13px;
+    line-height: 1.9rem;
+}
+
+h1.table-heading {
+    text-align: center;
+    font-size: 4rem;
+    
+}
+
+/* Skills */
+
+/* Home */
+
+#Home .home {
+    flex-direction: column-reverse;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px 0px;
+    margin-top: 0 auto;
+}
+
+#home .col-left {
+    width: 250px;
+    height: 360px;
+}
+
+#home .col-right {
+    width: 300px;
+    height: 360px;
+    margin-left: 20px;
+}
+
+#home .home .text {
+    font-size: 2rem;
+    margin-top: 40px;
+    color: #f1f1f1;
+}
+
+#home .home .btn {
+    display: inline-block;
+    padding: 10px 30px;
+    color: aliceblue;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-top: 30px;
+    transition: 0.3s ease background-color;
+    transition-property: background-color, color;
+}
+
+#home .home .btn:hover {
+    color: aliceblue;
+    background-color: brown;
+}
+
+/* Projects */
+#projects {
+    background-image: url(./img/project.jpg);
+    background-size: 200% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+}
+
+#projects .projects {
+    margin-top: -150px;
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 50 auto;
+    padding: 100px 0;
+}
+
+#projects .projects-introduction p {
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300px;
+    letter-spacing: 0.05rem;
+    color: salmon;
+}
+
+#projects .project-set {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+#projects .project {
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    background-image: url(./img/greybackground.jfif);
+    background-size: cover;
+    margin: 10px 5%;
+    position: relative;
+    z-index: 1;
+}
+
+#projects .project p {
+    text-align: left;
+    font-size: 13px;
+    line-height: 1.9rem;
+}
+
+/* footer */
+
+#footer {
+    background: #333;
+    color: #f1f1f1;
+    font-size: 1.4rem;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* Media Queries */
+@media only screen and (min-width: 668px) {
+    #main .cta{
+        font-size: 2.5rem;
+        padding: 20px 60px;
+    }
+    h1.section-tittle{
+        font-size: 6rem;
+    }
+    #main h1{
+        font-size: 7rem;
+    }
+    #skills .skills-set .skill{
+        flex-basis: 45%;
+
+    }
+
+    #skills {
+        background-image: url(./img/smoke.jfif);
+        background-size: cover;
+        background-color: black;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        z-index: 1;
+    }
+   
+}
